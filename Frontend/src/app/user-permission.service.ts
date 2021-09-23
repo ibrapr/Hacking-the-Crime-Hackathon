@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { LogInComponent } from './dell/generalScreens/log-in/log-in.component';
-import { User } from './dell/models/User';
-import { LogInServiceService } from './dell/services/LogInService/log-in-service.service';
+import { LogInComponent } from './screens/generalScreens/log-in/log-in.component';
+import { User } from './screens/models/User';
+import { LogInServiceService } from './screens/services/LogInService/log-in-service.service';
 
 @Injectable({
   providedIn: 'root'

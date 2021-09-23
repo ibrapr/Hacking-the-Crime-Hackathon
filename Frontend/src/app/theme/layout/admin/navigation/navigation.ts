@@ -33,107 +33,108 @@ const NavigationItems = [
     title: 'Menu',
     type: 'group',
     icon: 'feather icon-monitor',
-    children: [
-      {
-        id: 'admin',
-        title: 'Admin',
-        type: 'collapse',
-        icon: 'feather icon-user',
-        hidden:true,
-        children: [
-          {
-            id: 'chartsPage',
-            title: 'Charts',
-            type: 'item',
-            url: '/dell/admin/chartsPage'
-          },
-          {
-            id: 'accessPage',
-            title: 'Access',
-            type: 'item',
-            url: '/dell/admin/accessPage'
-          },
-          {
-            id: 'dashboardpage',
-            title: 'Admin Dashboard',
-            type: 'item',
-            url: '/dell/admin/dashboardPage'
-          },
-          {
-            id: 'forumPage',
-            title: 'Forum',
-            type: 'item',
-            url: '/dell/admin/forumPage'
-          },
-        ]
-      },
-      {
-        id: 'config',
-        title: 'Configurator',
-        type: 'collapse',
-        icon: 'feather icon-user',
-        hidden:true,
-        children: [
-          {
-            id: 'dashboardconfig',
-            title: 'Configurator Dashboard',
-            type: 'item',
-            url: '/dell/config/dashboardconfig'
-          }
-          ,
-          {
-            id: 'products',
-            title: 'Products',
-            type: 'item',
-            url: '/dell/config/products'
-          },
-          {
-            id: 'userMapping',
-            title: 'User Mapping',
-            type: 'item',
-            url: '/dell/config/userMapping'
-          },
-          {
-            id: 'releases',
-            title: 'Releases',
-            type: 'item',
-            url: '/dell/config/releases'
-          },
-          {
-            id: 'testConfiguration',
-            title: 'Parameters ',
-            type: 'item',
-            url: '/dell/config/testConfiguration'
-          },
-          {
-            id: 'productReleaseMapping',
-            title: 'Product Release Mapping',
-            type: 'item',
-            url: '/dell/config/productReleaseMapping'
-          },
-        ]
-      },
-      {
-        id: 'tester',
-        title: 'Tester',
-        type: 'collapse',
-        icon: 'feather icon-user',
-        hidden:true,
-        children: [
-          {
-            id: 'userDashBoard',
-            title: 'Tester Dashboard',
-            type: 'item',
-            url: '/dell/tester/userDashBoard'
-          },
-          {
-            id: 'userConfigGenerator',
-            title: 'Configuration Generator',
-            type: 'item',
-            url: '/dell/tester/userConfigGenerator'
-          },
-        ]
-      },
+    children: 
+    [
+      // {
+      //   id: 'admin',
+      //   title: 'Admin',
+      //   type: 'collapse',
+      //   icon: 'feather icon-user',
+      //   hidden:true,
+      //   children: [
+      //     {
+      //       id: 'chartsPage',
+      //       title: 'Charts',
+      //       type: 'item',
+      //       url: '/dell/admin/chartsPage'
+      //     },
+      //     {
+      //       id: 'accessPage',
+      //       title: 'Access',
+      //       type: 'item',
+      //       url: '/dell/admin/accessPage'
+      //     },
+      //     {
+      //       id: 'dashboardpage',
+      //       title: 'Admin Dashboard',
+      //       type: 'item',
+      //       url: '/dell/admin/dashboardPage'
+      //     },
+      //     {
+      //       id: 'forumPage',
+      //       title: 'Forum',
+      //       type: 'item',
+      //       url: '/dell/admin/forumPage'
+      //     },
+      //   ]
+      // },
+      // {
+      //   id: 'config',
+      //   title: 'Configurator',
+      //   type: 'collapse',
+      //   icon: 'feather icon-user',
+      //   hidden:true,
+      //   children: [
+      //     {
+      //       id: 'dashboardconfig',
+      //       title: 'Configurator Dashboard',
+      //       type: 'item',
+      //       url: '/dell/config/dashboardconfig'
+      //     }
+      //     ,
+      //     {
+      //       id: 'products',
+      //       title: 'Products',
+      //       type: 'item',
+      //       url: '/dell/config/products'
+      //     },
+      //     {
+      //       id: 'userMapping',
+      //       title: 'User Mapping',
+      //       type: 'item',
+      //       url: '/dell/config/userMapping'
+      //     },
+      //     {
+      //       id: 'releases',
+      //       title: 'Releases',
+      //       type: 'item',
+      //       url: '/dell/config/releases'
+      //     },
+      //     {
+      //       id: 'testConfiguration',
+      //       title: 'Parameters ',
+      //       type: 'item',
+      //       url: '/dell/config/testConfiguration'
+      //     },
+      //     {
+      //       id: 'productReleaseMapping',
+      //       title: 'Product Release Mapping',
+      //       type: 'item',
+      //       url: '/dell/config/productReleaseMapping'
+      //     },
+      //   ]
+      // },
+      // {
+      //   id: 'tester',
+      //   title: 'Tester',
+      //   type: 'collapse',
+      //   icon: 'feather icon-user',
+      //   hidden:true,
+      //   children: [
+      //     {
+      //       id: 'userDashBoard',
+      //       title: 'Tester Dashboard',
+      //       type: 'item',
+      //       url: '/dell/tester/userDashBoard'
+      //     },
+      //     {
+      //       id: 'userConfigGenerator',
+      //       title: 'Configuration Generator',
+      //       type: 'item',
+      //       url: '/dell/tester/userConfigGenerator'
+      //     },
+      //   ]
+      // },
     ]
   },
 ];

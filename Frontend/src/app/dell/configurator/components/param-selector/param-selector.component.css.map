@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf;;AACD,AAAA,EAAE,CAAA;EACE,cAAc,EAAE,MAAM;CACzB",
-    "sources": [
-        "param-selector.component.scss"
-    ],
-    "names": [],
-    "file": "param-selector.component.css"
-}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { LogInServiceService } from 'src/app/dell/services/LogInService/log-in-service.service';
+import { LogInServiceService } from 'src/app/screens/services/LogInService/log-in-service.service';
 
 @Component({
   selector: 'app-numbine-van-right',

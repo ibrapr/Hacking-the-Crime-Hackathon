@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, EventEmitter, NgZone, OnInit, Out
 import { NavigationItem } from '../navigation';
 import { NextConfig } from '../../../../../app-config';
 import { Location } from '@angular/common';
-import { LogInServiceService } from 'src/app/dell/services/LogInService/log-in-service.service';
+import { LogInServiceService } from 'src/app/screens/services/LogInService/log-in-service.service';
 
 @Component({
   selector: 'app-nav-content',
