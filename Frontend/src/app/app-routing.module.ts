@@ -7,11 +7,11 @@ import { ForgotPassComponent } from './screens/generalScreens/log-in/forgot-pass
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'stop',
     component: NumbineLayComponent,
     children: [
       {
-        path: '',
+        path: 'stop',
         redirectTo: '',
         pathMatch: 'full'
       },
@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () => import('./screens/admin-screens/admin-screens.module').then(module => module.AdminScreensModule)
       },
       {
-        path: 'admin',
+        path: 'school',
         loadChildren: () => import('./screens/school-screens/school-screens.module').then(module => module.SchoolScreensModule)
       },
       {
