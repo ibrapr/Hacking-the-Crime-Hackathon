@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "auth-profile-settings.component.scss"
+    ],
+    "names": [],
+    "file": "auth-profile-settings.component.css"
+}

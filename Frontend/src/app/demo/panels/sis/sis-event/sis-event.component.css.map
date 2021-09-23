@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "sis-event.component.scss"
+    ],
+    "names": [],
+    "file": "sis-event.component.css"
+}

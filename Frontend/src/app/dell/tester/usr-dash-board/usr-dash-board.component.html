@@ -1,0 +1,57 @@
+
+    <app-card cardTitle="Dashboard" [options]="false">
+
+        <div class="card-content">
+            <table>
+                <tr>
+                    <td>
+                        <app-product-selector labelText="Products: " (onSelectionChanged)=" selectedProduct($event)">
+                        </app-product-selector>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <app-release-selector labelText="Releases: " [releaseList]="releaseList" (onSelectionChanged)=" selectedRelease($event)"> </app-release-selector>
+                    </td>
+                    <div class="col-md-auto"></div>
+                    <td>
+                        <igx-date-range-picker style="margin-bottom: 16px;" [(ngModel)]="range">
+                            <igx-date-range-start>
+                                <input igxInput igxDateTimeEditor type="text">
+                                <igx-picker-toggle igxPrefix>
+                                    <igx-icon>calendar_today</igx-icon>
+                                </igx-picker-toggle>
+                            </igx-date-range-start>
+                            <igx-date-range-end>
+                                <input igxInput igxDateTimeEditor type="text">
+                            </igx-date-range-end>
+                        </igx-date-range-picker>
+                    </td>
+                    <div class="col-md-auto"></div>
+                    <td>
+                        <app-button class="type" name="Search" (click)="excuteFunctions();">
+                        </app-button>
+                    </td>
+                </tr>
+            </table>
+         
+        </div>
+        <div>
+            <small *ngIf="dateflag" class="form-text text-muted text-danger" style="font-weight: bold;">
+                Cannot start the DATE RANGE backwards!!</small>
+        </div>
+        <div>
+            <small *ngIf="prFlag" class="form-text text-muted text-danger" style="font-weight: bold;">
+                Cannot conduct a search without selecting a PRODUCT AND RELEASE!!</small>
+        </div>
+
+    </app-card>
+
+<!-- <app-numbine-actions-table [dataTable]="dataTable" [hasActions]="hasActions" [trashBool]="trash"
+    [hasParameterFileAndFileConfig]="hasParameterFileAndFileConfig" (trashModelChange)="deleteRow($event)">
+</app-numbine-actions-table> -->
+<app-card cardTitle="Data">
+    <app-numbine-actions-table [dataTable]="dataTable" [hasActions]="hasActions" [trashBool]="trash" [hasParameterFileAndFileConfig]="hasParameterFileAndFileConfig" (trashModelChange)="deleteRow($event)"
+    (downloadModelChange)="downloadFunction($event)" >
+    </app-numbine-actions-table>
+</app-card>

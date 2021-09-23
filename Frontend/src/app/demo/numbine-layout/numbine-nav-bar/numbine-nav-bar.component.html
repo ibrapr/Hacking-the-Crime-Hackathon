@@ -1,0 +1,17 @@
+<div class="container" *ngIf="this.flatConfig.layout === 'horizontal' && this.flatConfig.subLayout === 'horizontal-2'; else mainHeader">
+    <ng-container *ngTemplateOutlet="mainHeader"></ng-container>
+  </div>
+  <ng-template #mainHeader>
+    <div class="m-header">
+      <a href="javascript:" class="mobile-menu" id="mobile-collapse" (click)="navCollapse()"><span></span></a>
+      <a [routerLink]="['/dashboard/analytics']" class="b-brand">
+        <img id="main-logo" src="assets/images/dellLogo.png" alt="" class="logo" width="45px" height="45px">
+      </a>
+      <a class="mob-toggler" [ngClass]="{'on' : this.menuClass}" href="javascript:" (click)="toggleMobOption()"><i class="feather icon-more-vertical"></i></a>
+    </div>
+    <div class="collapse navbar-collapse" [style.display]="this.collapseStyle">
+      <app-numbine-van-left class="mr-auto"></app-numbine-van-left>
+      <app-numbine-van-right class="ml-auto"></app-numbine-van-right>
+    </div>
+  </ng-template>
+  

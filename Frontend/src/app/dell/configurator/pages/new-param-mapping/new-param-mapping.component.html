@@ -1,0 +1,47 @@
+<app-card cardTitle="Parameter Mapping">
+    <table>
+        <tr *ngIf="this.currentProduct!=null && !changingProduct; else selectProductBlock">
+            <td style="vertical-align: bottom;">
+                <h4 class="igx-typography" style="font-weight: bold;">Product: {{currentProduct.productName}}</h4>
+            </td>
+            <td style="text-align: right; vertical-align: bottom;">
+                <app-button name="Change Product" (click)="changeProduct()"></app-button>
+            </td>
+        </tr>
+        <tr> 
+            <td colspan="2" *ngIf="this.currentProduct!=null">
+             <div style="margin-top: 35px;"> 
+                <app-param-selector  labelText="Parameter Name:" (onSelectionChanged)="updateParameter($event)">
+                </app-param-selector>
+                <label *ngIf="!paramMappedToProduct && currentParameter != null" style="color:red;" class="igx-typography">Parameter
+                    not mapped to product</label>
+                </div>
+            </td>
+        </tr>
+        <br>
+        <tr *ngIf="currentParameter != null && currentProduct != null">
+            <td td colspan="3">
+                <app-param-release-mapping-table style="text-align: left;" [parameter]="this.currentParameter"  
+                [releases]="this.releases" [selectedStartIndex]="startIndices" [selectedEndIndex]="endIndices"
+                (selectedStartIndexEmitter)="updateStartReleases($event)" (selectedEndIndexEmitter)="updateEndReleases($event)"
+                [calculateEndReleases]="calculateEndReleases"></app-param-release-mapping-table>
+            </td>
+        </tr>
+        <br>
+        <tr *ngIf="currentParameter != null">
+            <td style="text-align: right;" colspan="2">
+                <div>                    
+                    <app-button class="cancel-button" (click)="cancelButton()" name='Cancel'></app-button>
+                    <app-button class="save-button" (click)="saveButton()"  name='Save'></app-button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <ng-template #selectProductBlock >
+        <td colspan="2">
+            <app-product-selector (onSelectionChanged)="updateProduct($event)" labelText="Product Name:     ">
+            </app-product-selector>
+        </td>
+        </ng-template>
+    <br><br>
+</app-card>

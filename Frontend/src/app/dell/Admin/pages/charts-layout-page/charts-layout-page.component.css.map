@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "charts-layout-page.component.scss"
+    ],
+    "names": [],
+    "file": "charts-layout-page.component.css"
+}

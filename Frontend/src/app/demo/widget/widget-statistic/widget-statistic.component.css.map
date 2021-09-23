@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "widget-statistic.component.scss"
+    ],
+    "names": [],
+    "file": "widget-statistic.component.css"
+}

@@ -1,0 +1,41 @@
+<app-card cardTitle="feedback">
+    <div class="card-content">
+
+        <div style="text-align: center;" *ngIf="loading">
+            Sending ...
+            <app-app-loading></app-app-loading>
+        </div>
+        <section *ngIf="!loading" style="width: 70%;">
+            <p style="font-weight: bold; font-size: xx-large;">Feedback Form</p>
+            <table style="width:100%">
+                <tr>
+                    <strong> <label>Feedback Type</label></strong>
+                    <app-numbine-auto-complete-select-box cssClass="" hintText="select option" [data]="selectOptions"
+                        (onSelectionChanged)="onSelectOption($event)"></app-numbine-auto-complete-select-box>
+                </tr>
+                <tr>
+                    <br>
+                    <strong> <label style="text-align: left; ">Topic</label></strong>
+                    <br>
+                    <textarea [(ngModel)]="topic" name="topic" rows="1" class="form-control" id="Report" name="Report"
+                        placeholder="Topic Title..."></textarea>
+                </tr>
+                <br>
+                <tr>
+                    <strong><label style="text-align: left; font-size: 18px;">Subject</label></strong>
+                    <br>
+                    <textarea [(ngModel)]="subject" name="subject" rows="8" class="form-control" id="Report"
+                        name="Report" placeholder="report in..."></textarea>
+                    <!-- <button (click)="print()">sss</button> -->
+                </tr>
+                <br>
+                <tr>
+                    <app-button name="Reset" style="float: left;" (click)="ResetTextArea()"></app-button>
+                    <app-button name="Send Ticket" style="float: right;" (click)="sendFeedBackReport()">
+                    </app-button>
+                </tr>
+                <br>
+            </table>
+        </section>
+    </div>
+</app-card>

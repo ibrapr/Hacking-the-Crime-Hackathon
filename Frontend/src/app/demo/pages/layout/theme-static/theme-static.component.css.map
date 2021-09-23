@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "theme-static.component.scss"
+    ],
+    "names": [],
+    "file": "theme-static.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "user-config-generator-page.component.scss"
+    ],
+    "names": [],
+    "file": "user-config-generator-page.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,AAAA,MAAM,CAAC;EACR,YAAY,EAAE,GAAG;CAClB",
+    "sources": [
+        "crt-peity.component.scss"
+    ],
+    "names": [],
+    "file": "crt-peity.component.css"
+}

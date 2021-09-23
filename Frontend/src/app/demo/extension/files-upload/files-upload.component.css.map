@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,sBAAmB;EACrC,UAAU,EAAE,yBAAsB;EAClC,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,GAAG;EAClB,kBAAkB,EAAE,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,qBAAkB;EACtD,UAAU,EAAE,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,qBAAkB;EAC9C,OAAO,EAAE,eAAe;CACzB",
+    "sources": [
+        "files-upload.component.scss"
+    ],
+    "names": [],
+    "file": "files-upload.component.css"
+}

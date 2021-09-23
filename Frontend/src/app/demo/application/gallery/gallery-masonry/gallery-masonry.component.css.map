@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "gallery-masonry.component.scss"
+    ],
+    "names": [],
+    "file": "gallery-masonry.component.css"
+}

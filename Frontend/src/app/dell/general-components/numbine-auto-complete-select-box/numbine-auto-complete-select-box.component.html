@@ -1,0 +1,5 @@
+<div [class]="cssClass">
+    <ng-select [disabled]="disabled" [ngClass]="'ng-select'" (clear)="resetSelected();" [items]="data" bindLabel="text" bindValue="id" [placeholder]="hintText"
+        appendTo="body" [virtualScroll]="true" [(ngModel)]="slectedById" (change)="onChange($event)">
+    </ng-select>
+</div>

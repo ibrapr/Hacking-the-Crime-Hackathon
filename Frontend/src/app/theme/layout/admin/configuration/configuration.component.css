@@ -1,0 +1,20 @@
+.menu-styler .nav-pills {
+  margin-bottom: 8px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body.flat-able-dark .menu-styler .tab-content {
+  background: rgba(4, 169, 245, 0.03);
+}
+
+body.flat-able-dark .menu-styler h1,
+body.flat-able-dark .menu-styler h2,
+body.flat-able-dark .menu-styler h3,
+body.flat-able-dark .menu-styler h4,
+body.flat-able-dark .menu-styler h5,
+body.flat-able-dark .menu-styler p,
+body.flat-able-dark .menu-styler h6 {
+  color: #222;
+}
+/*# sourceMappingURL=configuration.component.css.map */

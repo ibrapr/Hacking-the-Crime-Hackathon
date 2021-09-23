@@ -1,0 +1,24 @@
+:host {
+  padding: 0 !important;
+  height: 100%;
+}
+
+.gu-mirror {
+  background-color: white;
+  border-radius: 0.125rem;
+  padding: 0.5rem;
+  opacity: 1;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=adv-task-board.component.css.map */

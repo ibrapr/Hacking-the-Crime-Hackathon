@@ -1,0 +1,54 @@
+		chart: {
+          height: 300,
+          type: 'line',
+          zoom: {
+            enabled: false
+          },
+        },
+        series: [{
+            name: 'Number of users',
+            data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10,65,65]
+          },
+        ],
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: [5, 7, 5],
+          curve: 'straight',
+          dashArray: [0, 8, 5]
+        },
+        colors: ['#0e9e4a', '#ffa21d', '#ff5252'],
+        title: {
+          text: 'Users report',
+          align: 'left'
+        },
+        markers: {
+          size: 0,
+    
+          hover: {
+            sizeOffset: 6
+          }
+        },
+        xaxis: {
+          categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9',
+            'Week 10', 'Week 11', 'Week 12','Week 13', 'Week 14'],
+        },
+        tooltip: {
+          y: [{
+            title: {
+              formatter: (val) => val + ' (mins)'
+            }
+          }, {
+            title: {
+              formatter: (val) =>  val + ' per session'
+            }
+          }, {
+            title: {
+              formatter: (val) => val
+            }
+          }]
+        },
+        grid: {
+          borderColor: '#f1f1f1',
+        }

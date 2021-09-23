@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "hosp-patient.component.scss"
+    ],
+    "names": [],
+    "file": "hosp-patient.component.css"
+}

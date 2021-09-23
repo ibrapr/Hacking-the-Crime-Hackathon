@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "mail-compose.component.scss"
+    ],
+    "names": [],
+    "file": "mail-compose.component.css"
+}

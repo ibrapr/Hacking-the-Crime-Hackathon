@@ -1,0 +1,13 @@
+div {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+div:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+  color: #515558;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/*# sourceMappingURL=icon.component.css.map */

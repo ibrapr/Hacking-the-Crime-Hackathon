@@ -1,0 +1,11 @@
+<div class="">
+    <div class="form-group">
+      <label>{{leftSide}}</label>
+        <div class="switch switch-primary d-inline m-r-10"  style="margin-left: 20px;margin-right: 20px;">
+          <input type="checkbox" [id]="id" [value]="id" [(ngModel)]="isChecked"  checked (change)="onChanged($event)" >
+          <label [for]="id" class="cr"></label>
+        </div>
+      <label>{{rightSide}}</label>
+    </div>
+</div>
+  

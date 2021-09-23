@@ -1,0 +1,46 @@
+<app-card cardTitle="User Access">
+    <div class="card-content">
+            <table>
+                <tr>
+                    <td style="width: 40%;">
+                        <table style="width: 100%;">
+                            <tr style="width: 100%;">
+                                <td style="vertical-align: middle;" class="tdShrink">
+                                    <div style="margin-top: 35px;">
+                                        <label class="igx-typography">{{title}}</label>
+                                    </div>
+                                </td>
+                                <td class="tdGrow">
+                                    <app-numbine-select-box [data]="select" (change)="filterByRole($event.target.value)">
+                                    </app-numbine-select-box>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <div class="col-md-auto"></div>
+                    <td>
+                        <div style="margin-top: 35px;">
+
+                            <app-numbine-toggle-switch [id]="1" leftSide="InActive" rightSide="Active"
+                            (onSelectionChangedBooleanValue)="onStatusChange($event)">
+                        </app-numbine-toggle-switch>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="3" style="text-align: right;">
+                        
+                        <div>
+                            <button type="submit" class="btn btn-primary" routerLink="/dell/admin/addUserPage">New
+                                User</button>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+        <br>
+        <app-numbine-actions-table [dataTable]="dataTable" [hasActions]="true" [trashBool]="true" [editBool]="true"
+            (trashModelChange)="deleteFunction($event)" (editModelChange)="editUserFunction($event)">
+        </app-numbine-actions-table>
+    </div>
+</app-card>

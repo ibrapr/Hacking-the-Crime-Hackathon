@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,YAAY;CACtB;;AAED,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,cAAc;EACtB,MAAM,EAAE,OAAO;EACf,2BAA2B,EAAE,IAAI;EACjC,mBAAmB,EAAE,IAAI;EACzB,2BAA2B,EAAE,SAAS;EACtC,mBAAmB,EAAE,SAAS;CAC/B;;AAED,AAAA,UAAU,AAAA,MAAM,EAAE,UAAU,AAAA,MAAM,EAAE,UAAU,AAAA,OAAO,CAAC;EACpD,iBAAiB,EAAE,gBAAgB;EACnC,SAAS,EAAE,gBAAgB;CAC5B",
+    "sources": [
+        "adv-light-box.component.scss"
+    ],
+    "names": [],
+    "file": "adv-light-box.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "crt-high-chart.component.scss"
+    ],
+    "names": [],
+    "file": "crt-high-chart.component.css"
+}

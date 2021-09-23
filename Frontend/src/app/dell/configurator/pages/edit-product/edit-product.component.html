@@ -1,0 +1,31 @@
+<app-card cardTitle="Edit product">
+    <div class="card-content">
+
+        <div style="width: 30%;">
+            <label style="color:red; position: absolute; transform: translateX(-10px);">*</label>
+            <label>Product name:</label>
+            <app-input style="padding-left: 50px;" (change)="onNameChange($event.target.value)"
+            [inputModel]="currentProduct?.productName" type="name" classType="">
+        </app-input> 
+        
+    </div>
+    <!-- <app-input style="padding-left: 80px;" (change)="onNameChange($event.target.value)" [inputModel]="currentProduct?.productName" type="name"
+        classType=""></app-input> -->
+        
+        <app-numbine-toggle-switch (onSelectionChangedBooleanValue)="onStatusChange($event)" [id]="1"
+        leftSide="InActive" rightSide="Active">
+    </app-numbine-toggle-switch>
+    <app-numbine-table [dataTable]="dataTable"></app-numbine-table>
+    <br>
+    
+    <div>
+        
+        <app-button style="float: right;" type="btn btn-primary" name="Save" (click)="updateChangesToDb()" value=""
+        class="button">Save</app-button> 
+        <app-button style="float: right; padding-right: 30px" type="btn btn-primary" name="Cancel" routerLink="/dell/config/products"
+        class="button">Cancel</app-button>
+        
+    </div>
+    <br><br>
+</div>
+</app-card>

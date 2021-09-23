@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,CAAC,CAAA,UAAU;EACpB,MAAM,EAAE,IAAI;CACb;;AACD,AAAA,UAAU,CAAC;EACT,gBAAgB,EAAE,KAAK;EACvB,aAAa,EAAE,QAAQ;EACvB,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,gBAAgB,CAAC;EACf,WAAW,EAAE,eAAe;CAC7B;;AAED,AAAA,GAAG,AAAA,WAAW,CAAC;EACb,QAAQ,EAAE,IAAI;EACd,WAAW,EAAE,MAAM;CACpB",
+    "sources": [
+        "adv-task-board.component.scss"
+    ],
+    "names": [],
+    "file": "adv-task-board.component.css"
+}

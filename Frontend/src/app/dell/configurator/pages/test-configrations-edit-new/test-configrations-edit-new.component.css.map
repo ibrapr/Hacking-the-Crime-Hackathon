@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,WAAW,EAAC,IAAI;EAChB,UAAU,EAAE,IAAI;CACnB;;AACD,AAAA,MAAM,CAAE;EACJ,KAAK,EAAE,KAAK;CACf;;AACD,AAAA,KAAK,CAAA;EACD,WAAW,EAAE,KAAK;EAClB,UAAU,EAAE,KAAK;CAEpB;;AACD,AAAA,EAAE,CAAA;EACE,MAAM,EAAC,GAAG;CACb",
+    "sources": [
+        "test-configrations-edit-new.component.scss"
+    ],
+    "names": [],
+    "file": "test-configrations-edit-new.component.css"
+}

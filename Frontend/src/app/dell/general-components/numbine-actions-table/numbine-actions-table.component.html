@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table dataTable class="table table-striped table-bordered nowrap table-hover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let title of dataTable.titles; let j = index">{{title}}
+                            <i class="fa fa-arrow-up" id="titleAsc" (click)="colName = j; order = 'asc'"></i>
+                            <i class="fa fa-arrow-down" id="titleAsc" (click)="colName = j; order = 'desc'"></i>
+                        </th>
+
+                        <div *ngIf="hasActions == true; then actionsThenBlock"></div>
+                        <ng-template #actionsThenBlock>
+                            <th>Actions</th>
+                        </ng-template>
+                        <div *ngIf="hasParameterFileAndFileConfig == true; then paramAndConfigThenBlock"></div>
+                        <ng-template #paramAndConfigThenBlock>
+                            <th>Parameter File</th>
+                        </ng-template>
+                        <div *ngIf="hasSelect == true; then hasSelectBlock"></div>
+                        <ng-template #hasSelectBlock>
+                            <th>Start Release</th>
+                            <th>End Release</th>
+                        </ng-template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let x of dataTable.rows|tableSort:colName:order | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; let i = index">
+                        <td *ngFor="let data of (x)">{{data}}</td>
+                        <div *ngIf="hasActions == true; then actionsBlock"></div>
+                        <ng-template #actionsBlock>
+                            <td style="width: 225px; text-align: center; margin: auto; ">
+                                <div style="text-align: center; margin: auto;">
+                                    <div class="row" style="margin: auto; justify-content: center;">
+                                        <!-- <div class="col-md-auto"></div> -->
+                                        <div *ngIf="downloadBool == true; then downloadBlock"></div>
+                                        <ng-template #downloadBlock>
+                                            <!-- <div class="col-md-auto"></div> -->
+                                            <app-icon id="i" type="download" [iconIndex]="i" (click)="downloadEmit(x)" (downloadModelChange)="downloadEmit(i)">
+                                            </app-icon>
+                                        </ng-template>
+                                        <div *ngIf="editBool == true; then editBlock"></div>
+                                        <ng-template #editBlock>
+                                            <!-- <div class="col-md-auto"></div> -->
+                                            <app-icon id="i" type="edit" [iconIndex]="i" (click)="editEmit(x)" (editModelChange)="editEmit(i)">
+                                            </app-icon>
+                                        </ng-template>
+                                        <div *ngIf="trashBool == true; then trashBlock"></div>
+                                        <ng-template #trashBlock>
+                                            <!-- <div class="col-md-auto"></div> -->
+                                            <app-icon id="i" type="trash" [iconIndex]="i" (click)="trashEmit(x)" (trashModelChange)="trashEmit(i)">
+                                            </app-icon>
+                                        </ng-template>
+                                        <!-- <div class="col-md-auto"></div> -->
+                                    </div>
+                                </div>
+                            </td>
+                        </ng-template>
+                        <div *ngIf="hasParameterFileAndFileConfig == true; then paramAndConfigThenBlock"></div>
+                        <ng-template #paramAndConfigThenBlock>
+                            <td>
+                                <app-icon type="download" (click)="downloadEmit(x)" (downloadModelChange)="downloadEmit(i)"></app-icon>
+                            </td>
+                        </ng-template>
+                        <div *ngIf="hasSelect == true; then hasSelectBlock"></div>
+                        <ng-template #hasSelectBlock>
+                            <td>
+                                <app-numbine-select-box (change)="setStartReleaseIndex($event.target.value, i)" [data]="startReleaseData" [id]="idStart"></app-numbine-select-box>
+                            </td>
+                            <td>
+                                <app-numbine-select-box (change)="setEndReleaseIndex($event.target.value, i)" [data]="endReleases[i]" [id]="idEnd"></app-numbine-select-box>
+                            </td>
+                        </ng-template>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <ngb-pagination class="center" [(page)]="page" [pageSize]="pageSize" [collectionSize]="collectionSize">></ngb-pagination>
+        </div>
+    </div>
+</div>

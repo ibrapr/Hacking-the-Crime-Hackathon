@@ -1,0 +1,6 @@
+<div>
+    <h5 class="sub-title"   >{{title}}  </h5>
+    <select [name]="name" class="form-control form-control-default" [id]="id" (change)="selectOption($event.target.value)"  [(ngModel)]="selected" >       
+      <option *ngFor="let item of data" [value]="item?.id" [disabled]="item.disabled">{{item?.text}}</option>
+    </select>
+</div>

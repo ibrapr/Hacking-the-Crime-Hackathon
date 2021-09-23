@@ -1,0 +1,55 @@
+<!-- <app-numbine-navbar class="navbar pcoded-header navbar-expand-lg navbar-light " (onNavCollapse)="this.navCollapsed = !this.navCollapsed;" (onNavHeaderMobCollapse)="navMobClick()"></app-numbine-navbar>
+<app-numbine-charts type = "line"></app-numbine-charts>
+<app-numbine-charts type = "bar"></app-numbine-charts>
+<app-numbine-charts type = "pie"></app-numbine-charts>
+<app-numbine-alert buttonName="buttonName" alertTitle="Alert Title" alertText="Alert Text" successMassege="successMassege" failMassege="failMassege" fileName="fileName" fileType="xml"></app-numbine-alert>
+<div>
+    <app-card>
+        <h1>Angular Overview File</h1>
+        <h2>This html file show how to use the components in the development</h2>
+        <br/>
+        <h2>1. Button Overview</h2>
+        <h3>In order to get the right button choose one from the options bellow</h3>
+        <h4>Primary = "btn btn-primary"</h4>
+        <a  href="http://www.google.co.uk/" ><app-button [type] = "buttonClass.Primary"name="button"></app-button></a>
+        <h4>Success = "btn btn-success"</h4>
+        <app-button [type] = "buttonClass.Success" name="button"></app-button>
+        <h4>Secondary = "btn btn-secondary"</h4>
+        <app-button [type] = "buttonClass.Secondary" name="button"></app-button>
+        <h4>Danger = "btn btn-danger"</h4>
+        <app-button [type] = "buttonClass.Danger" name="button"></app-button>
+        <h4>Warning = "btn btn-warning"</h4>
+        <app-button [type] = "buttonClass.Warning" name="button"></app-button>
+        <h4>Info = "btn btn-info"</h4>
+        <app-button [type] ="buttonClass.Info" name="button"></app-button>
+        <h4>Light = "btn btn-light"</h4>
+        <app-button [type] = "buttonClass.Light" name="button"></app-button>
+        <h4>Dark = "btn btn-dark"</h4>
+        <app-button [type] = "buttonClass.Dark" name="button"></app-button>
+        <h4>InLinkfo = "btn btn-link"</h4>
+        <app-button [type] = "buttonClass.InLinkfo" name="button"></app-button>
+
+        <h2>2. Input Overview</h2>
+        <h3>In order to get the right size choose between 1 to a big number in the classType, in example below classType is 'col-md-3' and another one is 'col-md-7'</h3>
+        <app-input type="text"  classType="col-md-3" (keyup.enter) = "heloo($event)"></app-input>
+        
+        <app-icon type="edit"></app-icon>
+    </app-card>
+</div> -->
+<!-- <div>  -->
+    <!-- <app-numbine-table [dataTable]="dataTable"> </app-numbine-table> -->
+<!-- </div> -->
+<app-card>
+    <!-- <app-numbine-actions-table [hasSelect]="true" [dataTable] = "dataTable" [trashBool]="false" [editBool] = "true" [hasActions]="true" [trashClick] = "trashClickTest" [editClick] = "editClickTest" [hasParameterFileAndFileConfig] = "true"></app-numbine-actions-table> -->
+    <app-numbine-actions-table [hasSelect]="true" [dataTable] = "dataTable" [trashBool]="false" [editBool] = "true" [hasActions]="true"  [hasParameterFileAndFileConfig] = "true" (downloadModelChange)="show($event)"></app-numbine-actions-table>
+    
+</app-card>
+<!-- <app-input type="txt"  classType="col-md-5" [(inputModel)]="name"></app-input>
+
+<app-button [type] = "buttonClass.Warning" name="button" (click) = "show()"></app-button> -->
+
+<!-- <app-numbine-charts type = "line"></app-numbine-charts>
+<app-numbine-charts type = "bar"></app-numbine-charts>
+<app-numbine-charts type = "pie"></app-numbine-charts> -->
+
+<!-- <app-button [buttonType]="'reset'" [type] = "buttonClass.Secondary" name="button" [isDisabled]="false"></app-button> -->

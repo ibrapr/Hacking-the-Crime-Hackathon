@@ -1,0 +1,26 @@
+table
+{
+    width: 100%;
+    margin: auto;
+}
+td
+{
+    vertical-align: middle;
+}
+td:first-child
+{
+    width: 1px;
+    white-space: nowrap;
+}
+td:last-child
+{
+    width: max;
+}
+label{
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 20px;
+    margin-top: 5px; 
+    padding-right: 20px;
+    white-space: pre;
+}

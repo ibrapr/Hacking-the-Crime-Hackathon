@@ -1,0 +1,16 @@
+<div style="margin: 10px">
+    <container-element [ngSwitch]="type" (click)="onClick()">
+        <some-other-element *ngSwitchCase="'download'">
+            <div class="fa-2x feather icon-download"></div> <!--fa-2x fa fa-download-->
+        </some-other-element>
+        <some-other-element *ngSwitchCase="'open'">
+            <div class="fa-2x feather icon-eye"></div> <!--fa-2x fa fa-edit-->
+        </some-other-element>
+        <some-other-element *ngSwitchCase="'edit'">
+            <div class="fa-2x feather icon-edit"></div> <!--fa-2x fa fa-edit-->
+        </some-other-element>
+        <some-element *ngSwitchCase="'trash'">
+            <div  class="fa-2x feather icon-trash-2"></div> <!--fa-2x fa fa-trash-->
+        </some-element>
+    </container-element>
+</div>

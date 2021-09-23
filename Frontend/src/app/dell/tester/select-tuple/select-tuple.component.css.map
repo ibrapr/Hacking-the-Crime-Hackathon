@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "select-tuple.component.scss"
+    ],
+    "names": [],
+    "file": "select-tuple.component.css"
+}

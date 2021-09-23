@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "sis-dashboard.component.scss"
+    ],
+    "names": [],
+    "file": "sis-dashboard.component.css"
+}

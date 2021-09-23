@@ -1,0 +1,123 @@
+<app-card cardTitle="Configuration Generator">
+    <div class="card-content">
+
+        <table>
+            <tr>
+                <table>
+                    <tr>
+                        <td colspan="2" style="text-align: left;">
+                            <label style="font-weight: bold;" class="igx-typography">Select product & release</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;">
+                            <app-product-selector labelText="" (onSelectionChanged)="updateSelectedProduct($event)">
+                            </app-product-selector>
+                        </td>
+                        <td style="width: 50%;">
+                            <app-release-selector [disabled]="selectedflag" [releaseList]="releaseList"
+                                (onSelectionChanged)="selectedRelease($event)"> </app-release-selector>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td colspan="2" *ngIf="loading" style="margin: auto;">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </tr>
+            <br>
+            <tr>
+                <table>
+                    <tr>
+                        <div *ngIf="editing">
+                            <app-input type=" text" classType="" aria-required="true"
+                                [(inputModel)]="valueListString[index]" (inputModelChange)="updateEditedRows($event)"
+                                name="name"></app-input>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div *ngIf="!loading&&!selectedflag">
+                            <app-numbine-actions-table [dataTable]="dataTable" [editBool]='edit'
+                                (editModelChange)="updateFunction($event)"></app-numbine-actions-table>
+
+
+                        </div>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+    </div>
+</app-card>
+
+<!-------------------------second table(function controls)---------------------------------->
+
+<app-card cardTitle="Generate New Test Files">
+    <div class="card-content">
+
+
+        <table>
+            <tr style="width: 100%;">
+                <td>
+                    <app-select-tuple [(inputModel)]="selectedTuple"
+                        (inputModelChange)="updateTuple($event)">
+                    </app-select-tuple>
+                </td>
+
+                <td style="width: 10px;">
+
+                </td>
+                <td style="text-align: right; margin-bottom: 20px;">
+                    <app-button styleX="width: 150px" name='Generate' (click)="generateTsc()"></app-button>
+                </td>
+
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <p>Enter the test cycle:</p>
+
+                </td>
+            </tr>
+            <tr style="width: 100%;">
+                <td>
+                    <app-input holder="Enter test cycle description" type="text"
+                        [(inputModel)]="testCycle"  aria-required="true" classType=""
+                        name="description"></app-input>
+
+                </td>
+                <td>
+
+                </td>
+                <td style="text-align: right;">
+                    <div>
+                        <div *ngIf="!genLoading">
+                            <app-button styleX="width: 150px" [isDisabled]="!generatedflag" name='Download'
+                                (click)="downloadFunction()"></app-button>
+                        </div>
+                        <div *ngIf="genLoading">
+                            <div class="spinner-border"></div>
+                        </div>
+                    </div>
+
+                </td>
+                <td>
+
+
+                </td>
+
+            </tr>
+
+
+            <br>
+        </table>
+        <div *ngIf="generatedflag" style="margin-top: 60px;">
+            <app-numbine-actions-table [dataTable]="datatable2" [editBool]='flase'>
+            </app-numbine-actions-table>
+        </div>
+    </div>
+</app-card>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "full-event-calendar.component.scss"
+    ],
+    "names": [],
+    "file": "full-event-calendar.component.css"
+}

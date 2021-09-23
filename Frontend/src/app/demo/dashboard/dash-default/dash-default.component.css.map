@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "dash-default.component.scss"
+    ],
+    "names": [],
+    "file": "dash-default.component.css"
+}

@@ -1,0 +1,12 @@
+<app-card cardTitle="Parameters">
+
+    <div class="card-content">
+        <app-button id="button" name="New Param" type="btn btn-primary"
+            routerLink="/dell/config/testConfigrationsEditNew"> New Param></app-button>
+            <br><br>
+        <app-numbine-actions-table [dataTable]="dataTable" [trashBool]="trash" [editBool]="edit"
+            (trashModelChange)="deleteRow($event)" (editModelChange)="updateFunction($event)">
+
+        </app-numbine-actions-table>
+    </div>
+</app-card>

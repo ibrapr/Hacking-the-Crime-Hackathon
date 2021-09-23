@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "crt-chart-js.component.scss"
+    ],
+    "names": [],
+    "file": "crt-chart-js.component.css"
+}
