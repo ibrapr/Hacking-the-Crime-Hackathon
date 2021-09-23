@@ -124,7 +124,8 @@ export class BreadcrumbComponent implements OnInit {
       }
     });
     this.navigationList = result;
-    this.titleService.setTitle(title + ' | Flat Able Angular 9+ Admin Template');
+    this.titleService.setTitle('Lets Stop Bullying');
+    // this.titleService.setTitle(title + ' | Flat Able Angular 9+ Admin Template');
   }
 
 }

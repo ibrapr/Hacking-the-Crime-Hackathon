@@ -1,5 +1,4 @@
 import { PipeTransform } from "@angular/core";
-import { Product } from "./Product";
 
 export class DataTable {
     public titles: string[]

@@ -29,25 +29,6 @@ export class LogInComponent implements OnInit {
         if (this.logInService.ValidateEmail(email)) {
           this.actionAlert.alert("All good!",3000,true,'center','success');
         }
-        this.loading = false;
-        if(this.usr.roles[0].name === "admin"){
-          this.nav.setHidden(true,"config")
-          this.nav.setHidden(true,"tester")
-          this.nav.setHidden(false,"admin")
-          this.router.navigateByUrl('/dell/admin');
-        }
-        if(this.usr.roles[0].name === "configurator" || this.usr.roles[0].name==="config"){
-          this.nav.setHidden(true,"admin")
-          this.nav.setHidden(true,"tester")
-          this.nav.setHidden(false,"config")
-          this.router.navigateByUrl('/dell/config');
-        }
-        if(this.usr.roles[0].name === "tester" || this.usr.roles[0].name === "user"){
-          this.nav.setHidden(true,"admin")
-          this.nav.setHidden(true,"config")
-          this.nav.setHidden(false,"tester")
-          this.router.navigateByUrl('/dell/tester');
-        }
       },
       (err) => {
         console.log(err);

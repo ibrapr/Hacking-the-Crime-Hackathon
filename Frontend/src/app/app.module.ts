@@ -21,16 +21,14 @@ import { ToggleFullScreenDirective } from './theme/shared/full-screen/toggle-ful
 import { NavigationItem } from './theme/layout/admin/navigation/navigation';
 import { NgbButtonsModule, NgbDropdownModule, NgbTabsetModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-import { DellRoutingModule } from './screens/dell-routing.module';
+import { ScreensRoutingModule } from './screens/screens-routing.module';
 import { NumbineLayComponent } from './demo/numbine-layout/numbine-lay/numbine-lay.component';
 import { NumbineNavBarComponent } from './demo/numbine-layout/numbine-nav-bar/numbine-nav-bar.component';
 import { NumbineVanLeftComponent } from './demo/numbine-layout/numbine-nav-bar/numbine-van-left/numbine-van-left.component';
 import { NumbineVanRightComponent } from './demo/numbine-layout/numbine-nav-bar/numbine-van-right/numbine-van-right.component';
-import { UserPermissionGuardService } from './user-permission-guard.service';
-import { UserPermissionService } from './user-permission.service';
 import { FormsModule } from '@angular/forms';
 import { GeneralComponentsModule } from './screens/general-components/general-components.module';
-import { DellModule } from './screens/dell.module';
+import { ScreensModule } from './screens/screens.module';
 
 
 @NgModule({
@@ -67,11 +65,11 @@ import { DellModule } from './screens/dell.module';
     NgbButtonsModule,
     HttpClientModule,
     NgbTabsetModule,
-    DellRoutingModule,
-    DellModule,
+    ScreensRoutingModule,
+    ScreensModule,
     NgSelectModule
   ],
-  providers: [NavigationItem, UserPermissionService, UserPermissionGuardService],
+  providers: [NavigationItem],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

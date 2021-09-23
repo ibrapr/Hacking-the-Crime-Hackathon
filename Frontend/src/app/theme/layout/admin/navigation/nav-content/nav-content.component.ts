@@ -48,7 +48,7 @@ export class NavContentComponent implements OnInit, AfterViewInit {
       }, 500);
     }
     this.name=this.logInServ.usr.name;
-    this.role=this.logInServ.usr.roles[0].name;
+    this.role="user";
   }
 
   ngAfterViewInit() {

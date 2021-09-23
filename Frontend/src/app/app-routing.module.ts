@@ -12,18 +12,19 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dell/admin',
+        redirectTo: '',
         pathMatch: 'full'
       },
-      // {
-      //   path: 'dell/admin',
-      //   canActivate: [
-      //     AdminPermissionGuardService
-      //   ],
-      //   loadChildren: () => import('./dell/admin/admin.module').then(module => module.AdminModule)
-      // },
       {
-        path: 'dell',
+        path: 'admin',
+        loadChildren: () => import('./screens/admin-screens/admin-screens.module').then(module => module.AdminScreensModule)
+      },
+      {
+        path: 'admin',
+        loadChildren: () => import('./screens/school-screens/school-screens.module').then(module => module.SchoolScreensModule)
+      },
+      {
+        path: '**',
         component: NotFoundComponent
       },
     ]
