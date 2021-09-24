@@ -26,7 +26,7 @@ public class User {
 	
 	@Column(unique = true)
 	private String phoneNumber;
-
+	
 	public User() {
 		super();
 	}
@@ -115,6 +115,8 @@ public class User {
 		return "User [id=" + id + ", email=" + email + ", name=" + name + ", code=" + code + ", phoneNumber="
 				+ phoneNumber + "]";
 	}
-	
+
+
+
 	
 }

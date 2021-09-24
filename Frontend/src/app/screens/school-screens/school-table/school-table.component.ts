@@ -18,7 +18,7 @@ export class SchoolTableComponent implements OnInit {
   reports: Report[] = [];
   loading = false;
   index = 0;
-  public titles = ['Bully Name','Class','Status'];
+  public titles = ['Bullied Kid Name','Class','Status'];
   public rows: any = [];
   dataTable = new DataTable()
   currentReport: Report;

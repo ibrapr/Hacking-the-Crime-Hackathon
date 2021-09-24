@@ -14,12 +14,22 @@ public class UserBL {
 	public List<User> getAll(){
 		return userRepo.findAll();
 	}
-	public boolean addUser(String email,String name,String phoneNumber) {
+	public boolean addUser(String email,String name,String phoneNumber, int password) {
 		User user = new User();
 		user.setEmail(email);
 		user.setName(name);
 		user.setPhoneNumber(phoneNumber);
+		user.setCode(password);
 		userRepo.save(user);
 		return true;
+	}
+	public User validate(String email, int password) {
+		User user = userRepo.findByEmail(email);
+		if (user != null) {
+			if (user.getCode() == password) {
+				return user;
+			}
+		}
+		return null;
 	}
 }
