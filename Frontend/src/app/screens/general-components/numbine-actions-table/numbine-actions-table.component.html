@@ -48,7 +48,7 @@
                                         <div *ngIf="trashBool == true; then trashBlock"></div>
                                         <ng-template #trashBlock>
                                             <!-- <div class="col-md-auto"></div> -->
-                                            <app-icon id="i" type="trash" [iconIndex]="i" (click)="trashEmit(x)" (trashModelChange)="trashEmit(i)">
+                                            <app-icon id="i" type="open" [iconIndex]="i" (click)="trashEmit(x)" (trashModelChange)="trashEmit(i)">
                                             </app-icon>
                                         </ng-template>
                                         <!-- <div class="col-md-auto"></div> -->

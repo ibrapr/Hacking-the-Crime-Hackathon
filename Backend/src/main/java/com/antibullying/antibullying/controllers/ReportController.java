@@ -26,6 +26,10 @@ public class ReportController {
 	public boolean updateStatus(Integer id,boolean status) {
 		return reportBL.updateStatus(id,status);
 	}
+	@PutMapping("updateExplaination")
+	public boolean updateExplaination(Integer id,String explanation) {
+		return reportBL.updateExplaination(id,explanation);
+	}
 	@GetMapping("getAll")
 	public List<Report> getAll(){
 		return reportBL.getAll();
