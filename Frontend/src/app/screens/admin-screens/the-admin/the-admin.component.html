@@ -2,11 +2,9 @@
     <table class="card-content">
         <tr>
             <td>
-                <app-numbine-actions-table [dataTable]="dataTable" [editBool]="edit" [trashBool]="trash">
+                <app-numbine-actions-table [dataTable]="dataTable" [editBool]="edit" [trashBool]="trash" (trashModelChange)="deleteRow($event)" (editModelChange)="updateFunction($event)">
                 </app-numbine-actions-table>
             </td>
         </tr>
-
-
     </table>
 </app-card>
