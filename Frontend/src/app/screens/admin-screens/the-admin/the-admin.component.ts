@@ -11,11 +11,11 @@ import { ReportServiceService } from '../../services/report-service.service';
 })
 export class TheAdminComponent implements OnInit {
   trash: Boolean = true;
-  edit: Boolean = false;
+  edit: Boolean = true;
   public reports: Report[] = [];
 
   
-  public title = ['Subject','Status'];
+  public title = ['Name','Class','Status'];
   public rows = [];
   public dataTable = new DataTable();
 
@@ -41,9 +41,8 @@ export class TheAdminComponent implements OnInit {
  updateRows() {
     this.rows.length = 0;
     this.reports.forEach(report => {
-        this.rows.push([report.subject,report.status]);
+        this.rows.push([report.subject, report.content,report.status]);
     });
   }
-
 
 }

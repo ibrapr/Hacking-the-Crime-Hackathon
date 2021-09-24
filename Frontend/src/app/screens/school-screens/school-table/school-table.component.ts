@@ -18,7 +18,7 @@ export class SchoolTableComponent implements OnInit {
   reports: Report[] = [];
   loading = false;
   index = 0;
-  public titles = ['Name', 'Status'];
+  public titles = ['Name','Class','Status'];
   public rows: any = [];
   dataTable = new DataTable()
   currentReport: Report;
@@ -51,7 +51,7 @@ export class SchoolTableComponent implements OnInit {
     this.rows.length = 0;
     this.reports.forEach(element => {
       
-      this.rows.push([element.subject, element.status]);
+      this.rows.push([element.subject, element.content, element.status]);
     });
     this.dataTable = new DataTable();
     this.dataTable.rows = this.rows;
@@ -60,7 +60,6 @@ export class SchoolTableComponent implements OnInit {
   deleteRow(index: number) {
     this.index = index;
     this.actionAlert.alert(this.reports[index].content, 2500, null, '', '');
-
   }
   updateFunction(index: number) {
     this.dataService.changeReport(this.reports[index]);
