@@ -1,0 +1,9 @@
+<app-card>
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Explaination</label>
+            <textarea [(ngModel)]="explain" name="explain" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+            <Button (click)="submit()" type="submit" class="btn btn-primary">Submit</Button>
+        </div>
+    </form>
+</app-card>

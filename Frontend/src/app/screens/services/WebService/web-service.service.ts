@@ -10,7 +10,7 @@ export class WebServiseService {
   [x: string]: any;
 
 
-  readonly ROOT_URL = "https://numbine.herokuapp.com/";
+  readonly ROOT_URL = "http://192.168.1.29:8084/";
 
   config = {
     headers: WebServiseService.httpHeaders,

@@ -15,7 +15,7 @@ export class TheAdminComponent implements OnInit {
   public reports: Report[] = [];
 
   
-  public title = ['Subject','Status'];
+  public title = ['Name','Class','Status'];
   public rows = [];
   public dataTable = new DataTable();
 
@@ -41,9 +41,8 @@ export class TheAdminComponent implements OnInit {
  updateRows() {
     this.rows.length = 0;
     this.reports.forEach(report => {
-        this.rows.push([report.subject,report.status]);
+        this.rows.push([report.subject, report.content,report.status]);
     });
   }
-
 
 }

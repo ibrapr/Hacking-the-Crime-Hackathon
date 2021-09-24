@@ -51,7 +51,7 @@ const NavigationItems = [
             id: 'accessPage',
             title: 'Dashboard',
             type: 'item',
-            url: '/admin/dashboard'
+            url: '/stop/admin/table'
           },
         ]
       },
@@ -72,7 +72,7 @@ const NavigationItems = [
             id: 'accessPage',
             title: 'Dashboard',
             type: 'item',
-            url: '/school/dashboard'
+            url: '/stop/school/table'
           },
         ]
       },
