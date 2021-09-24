@@ -10,11 +10,6 @@ const routes: Routes = [
     path: 'stop',
     component: NumbineLayComponent,
     children: [
-      { 
-        path: 'stop',
-        redirectTo: '',
-        pathMatch: 'full'
-      },
       {
         path: 'admin',
         loadChildren: () => import('./screens/admin-screens/admin-screens.module').then(module => module.AdminScreensModule)
@@ -29,14 +24,15 @@ const routes: Routes = [
       },
     ]
   },
+  { 
+    path: '',
+    redirectTo: 'stop/school/table',
+    pathMatch: 'full'
+  },
   {
     path: 'login',
     component: LogInComponent
   },
-  {
-    path: 'forgotPass',
-    component: ForgotPassComponent
-  }
 ];
 
 @NgModule({

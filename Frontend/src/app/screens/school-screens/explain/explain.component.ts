@@ -11,29 +11,20 @@ import { ReportServiceService } from '../../services/report-service.service';
 })
 export class ExplainComponent implements OnInit {
 
-  constructor(private dataService: DataService,private reportService:ReportServiceService) { }
+  constructor(private dataService: DataService, private reportService: ReportServiceService) { }
   currentReport: Report;
   ReportSubscription: Subscription;
-  explain:String;
+  explain: String;
   ngOnInit(): void {
-    this.ReportSubscription = this.dataService.currentReport.subscribe(currentReport =>
-      {
-        this.currentReport = currentReport;
-     
-      });
+    this.ReportSubscription = this.dataService.currentReport.subscribe(currentReport => {
+      this.currentReport = currentReport;
+
+    });
   }
-submit()
-{
+  submit() {
+    this.reportService.updateExplaination(this.explain, this.currentReport.id).subscribe(() => {
+      
+    });
 
-
-  alert(this.currentReport.id)
- alert(this.explain)
-  this.reportService.updateExplaination( this.explain ,this.currentReport.id).subscribe(() => {
-
-
-
-
-});
-
-}
+  }
 }
