@@ -47,7 +47,7 @@ export class SchoolTableComponent implements OnInit {
     });
   }
   updateRows() {
-
+    console.log(this.reports)
     this.rows.length = 0;
     this.reports.forEach(element => {
       

@@ -3,6 +3,7 @@ package com.antibullying.antibullying.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,6 +15,7 @@ import com.antibullying.antibullying.beans.Report;
 import com.antibullying.antibullying.repositories.ReportRepository;
 @RestController
 @RequestMapping("Report")
+@CrossOrigin
 public class ReportController {
 	@Autowired
 	ReportBL reportBL;
