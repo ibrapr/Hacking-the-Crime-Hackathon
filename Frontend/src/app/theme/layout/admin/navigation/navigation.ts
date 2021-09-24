@@ -42,12 +42,6 @@ const NavigationItems = [
         hidden:false,
         children: [
           {
-            id: 'chartsPage',
-            title: 'Charts',
-            type: 'item',
-            url: '/admin/charts'
-          },
-          {
             id: 'accessPage',
             title: 'Dashboard',
             type: 'item',
@@ -62,12 +56,6 @@ const NavigationItems = [
         icon: 'feather icon-user',
         hidden:false,
         children: [
-          {
-            id: 'chartsPage',
-            title: 'Charts',
-            type: 'item',
-            url: '/school/charts'
-          },
           {
             id: 'accessPage',
             title: 'Dashboard',
