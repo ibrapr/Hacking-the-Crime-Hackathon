@@ -48,7 +48,7 @@ public index: number;
   }
   deleteRow(index: number) {
     this.index = index;
-    this.actionAlert.alert(this.reports[index].content, 2500, null, '', '');
+    this.actionAlert.alert(this.reports[index].explanation, 100000, null, '', '');
   }
   updateFunction(index: number) {
 
