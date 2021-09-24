@@ -13,4 +13,17 @@ export class ReportServiceService {
   public getAllreports(): Observable<Report[]> {
     return this.webService.get<Report[]>("Report/getAll", null);
   }
+  public updateExplaination(explaination:String,id:number)
+  {
+    let newExp = new Map<string,any>();
+    newExp.set("explanation", explaination);
+    newExp.set("id", id);
+    return this.webService.put<boolean>("Report/updateExplaination", newExp);
+
+  }
+
+
+
+
+
 }
