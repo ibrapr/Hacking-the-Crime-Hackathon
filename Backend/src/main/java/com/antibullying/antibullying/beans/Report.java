@@ -21,6 +21,7 @@ public class Report {
 	private String content;
 	private boolean status;
 	private String explanation;
+	
 	public Report() {
 		super();
 	}

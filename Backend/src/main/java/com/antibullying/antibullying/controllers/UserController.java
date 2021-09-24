@@ -15,11 +15,7 @@ public class UserController {
 	UserBL userBL;
 	
 	@PostMapping("addUser")
-	public boolean addUser() {
-		return true;
-	}
-	@DeleteMapping("deleteUser")
-	public boolean deleteUser() {
-		return true;
+	public boolean addUser(String email,String name,String phoneNumber)  {
+		return userBL.addUser(email, name, phoneNumber);
 	}
 }
