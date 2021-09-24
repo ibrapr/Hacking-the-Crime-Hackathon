@@ -21,7 +21,14 @@ export class ReportServiceService {
     return this.webService.put<boolean>("Report/updateExplaination", newExp);
 
   }
+  public updateStatus(status:boolean,id:number)
+  {
+    let newExp = new Map<string,any>();
+    newExp.set("status", status);
+    newExp.set("id", id);
+    return this.webService.put<boolean>("Report/updateStatus", newExp);
 
+  }
 
 
 
