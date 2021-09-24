@@ -63,7 +63,7 @@ export class SchoolTableComponent implements OnInit {
   }
   updateFunction(index: number) {
     this.dataService.changeReport(this.reports[index]);
-    this.router.navigate(['/dell/config/editExplanation', { update: 'true' }]);
+    this.router.navigate(['/stop/school/explain', { update: 'true' }]);
   }
 
 
