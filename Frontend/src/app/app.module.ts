@@ -51,7 +51,8 @@ import { ScreensModule } from './screens/screens.module';
     NumbineLayComponent,
     NumbineNavBarComponent,
     NumbineVanLeftComponent,
-    NumbineVanRightComponent
+    NumbineVanRightComponent,
+  
   ],
   imports: [
     GeneralComponentsModule,
