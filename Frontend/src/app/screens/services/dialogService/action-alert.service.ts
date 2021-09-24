@@ -79,7 +79,7 @@ export class ActionAlertService
    * @param position 'top', 'top-start', 'top-end' (default position), 'center', 'center-start', 'center-end', 'bottom', 'bottom-start', or 'bottom-end'.
    * @param icon 'success', 'error', 'info', 'warning', 'question'
    */
-  alert(title: string, timer: number, toast: boolean, position: string = 'top-end', icon: string = 'success')
+  alert(title: string,timer: number, toast: boolean, position: string = 'top-end', icon: string = 'success')
   {
     const options = {
       title: title,

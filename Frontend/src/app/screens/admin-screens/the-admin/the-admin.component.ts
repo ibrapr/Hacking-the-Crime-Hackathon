@@ -16,12 +16,12 @@ export class TheAdminComponent implements OnInit {
   edit: Boolean = true;
   public reports: Report[] = [];
 
-  
-  public title = ['Name','Class','Status'];
+
+  public title = ['Name', 'Class', 'Status'];
   public rows = [];
   public dataTable = new DataTable();
-public index: number;
-  constructor(private dataService: DataService, private router: Router,private reportService: ReportServiceService, private actionAlert: ActionAlertService) { }
+  public index: number;
+  constructor(private dataService: DataService, private router: Router, private reportService: ReportServiceService, private actionAlert: ActionAlertService) { }
 
   ngOnInit(): void {
     this.dataTable.rows = this.rows;
@@ -29,8 +29,8 @@ public index: number;
     this.dataTable.rows = this.rows;
     this.dataTable.titles = this.title;
     let obsRelease = this.reportService.getAllreports();
-    obsRelease.subscribe(report=>{
-      this.reports=report;
+    obsRelease.subscribe(report => {
+      this.reports = report;
       this.dataTable = new DataTable();
       this.dataTable.rows = this.rows;
       this.dataTable.titles = this.title;
@@ -40,25 +40,27 @@ public index: number;
 
     });
   }
- updateRows() {
+  updateRows() {
+    let obsRelease = this.reportService.getAllreports();
+    obsRelease.subscribe(report => {
+      this.reports = report;
+    }, error => {
+    });
     this.rows.length = 0;
     this.reports.forEach(report => {
-        this.rows.push([report.subject, report.content,report.status]);
+      this.rows.push([report.subject, report.content, report.status]);
     });
   }
   deleteRow(index: number) {
     this.index = index;
-    this.actionAlert.alert(this.reports[index].explanation, 100000, null, '', '');
+    this.actionAlert.alert("Explaination: " + this.reports[index].explanation, 100000, null, '', '');
   }
   updateFunction(index: number) {
-
-    this.reportService.updateStatus(!this.reports[index].status, this.reports[index].id).subscribe(() => {
-      this.actionAlert.alertWithCallback("The status has been changed successfully!", 2500, false,()=>{
-        this.reports[index].status=!this.reports[index].status;
-        this.updateRows();
-      }, 'center', 'success');
-
+    this.reportService.updateStatus(!this.reports[index].status, this.reports[index].id).subscribe((bool) => {
+      this.actionAlert.alert("The status has been changed successfully!", 2500, bool, 'center');
+      this.reports[index].status = !this.reports[index].status;
     });
+    this.updateRows();
   }
 
 }

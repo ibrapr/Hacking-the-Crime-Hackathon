@@ -47,7 +47,7 @@ export class NavContentComponent implements OnInit, AfterViewInit {
         (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = '100%';
       }, 500);
     }
-    this.name=this.logInServ.usr.name;
+    this.name="Rasheed"
     this.role="user";
   }
 
