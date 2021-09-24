@@ -45,5 +45,15 @@ public class ReportBL {
 		reportRepo.save(report);
 		return true;
 	}
+	public boolean updateExplaination(Integer id,String explanation) {
+		Report report = reportRepo.findById(id).get();
+		if(report == null) {
+			return false;
+		}
+		report.setExplanation(explanation);
+		report.setStatus(true);
+		reportRepo.save(report);
+		return true;
+	}
 	
 }	
