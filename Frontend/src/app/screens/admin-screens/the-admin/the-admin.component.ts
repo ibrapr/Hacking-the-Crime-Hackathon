@@ -8,10 +8,11 @@ import { DataTable } from '../../models/DataTable';
   styleUrls: ['./the-admin.component.scss']
 })
 export class TheAdminComponent implements OnInit {
-  trash: Boolean = false;
-  edit: Boolean = true;
-  public title = ['Release','Product Name', 'Version', 'Status'];
-  public rows = [["Temp"], ["Temp"]];
+  trash: Boolean = true;
+  edit: Boolean = false;
+  
+  public title = ['Type','School Name', 'Status', 'Action'];
+  public rows = [];
   public dataTable = new DataTable();
 
   constructor( private router: Router) { }
