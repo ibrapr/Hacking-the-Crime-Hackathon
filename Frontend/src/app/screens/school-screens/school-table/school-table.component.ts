@@ -18,7 +18,7 @@ export class SchoolTableComponent implements OnInit {
   reports: Report[] = [];
   loading = false;
   index = 0;
-  titles = ['Name', 'Status'];
+  public titles = ['Name', 'Status'];
   public rows: any = [];
   dataTable = new DataTable()
   currentReport: Report;
@@ -30,11 +30,10 @@ export class SchoolTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.changeReport(null);
-    
-
+    this.dataTable = new DataTable();
     this.dataTable.rows = this.rows;
     this.dataTable.titles = this.titles;
-    this.dataTable = new DataTable();
+    
     let obsProducts = this.reportService.getAllreports();
     obsProducts.subscribe(data => {
       this.reports = data;

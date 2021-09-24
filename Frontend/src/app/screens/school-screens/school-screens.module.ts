@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 
 import { SchoolScreensRoutingModule } from './school-screens-routing.module';
 import { SchoolTableComponent } from './school-table/school-table.component';
+import { GeneralComponentsModule } from '../general-components/general-components.module';
 
 
 @NgModule({
   declarations: [SchoolTableComponent],
   imports: [
+    GeneralComponentsModule,
     CommonModule,
     SchoolScreensRoutingModule,
     SharedModule

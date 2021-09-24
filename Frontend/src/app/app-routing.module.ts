@@ -10,7 +10,7 @@ const routes: Routes = [
     path: 'stop',
     component: NumbineLayComponent,
     children: [
-      {
+      { 
         path: 'stop',
         redirectTo: '',
         pathMatch: 'full'
