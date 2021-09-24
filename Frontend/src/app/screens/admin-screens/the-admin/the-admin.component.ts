@@ -11,7 +11,7 @@ import { ReportServiceService } from '../../services/report-service.service';
 })
 export class TheAdminComponent implements OnInit {
   trash: Boolean = true;
-  edit: Boolean = false;
+  edit: Boolean = true;
   public reports: Report[] = [];
 
   
