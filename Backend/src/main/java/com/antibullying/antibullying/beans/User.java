@@ -24,6 +24,7 @@ public class User {
 	
 	private int code;
 	
+	@Column(unique = true)
 	private String phoneNumber;
 
 	public User() {
