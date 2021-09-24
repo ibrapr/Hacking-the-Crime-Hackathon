@@ -5,6 +5,7 @@ import { DataTable } from '../../models/DataTable';
 import { Report } from '../../models/Report'
 import { DataService } from '../../services/DataService/data.service';
 import { ActionAlertService } from '../../services/dialogService/action-alert.service';
+import { ReportServiceService } from '../../services/report-service.service';
 
 @Component({
   selector: 'app-school-table',
@@ -25,7 +26,7 @@ export class SchoolTableComponent implements OnInit {
   statusString:String;
 
   constructor(private dataService: DataService,private actionAlert: ActionAlertService
-    , private router: Router) { }
+    , private router: Router,private reportService:ReportServiceService) { }
 
   ngOnInit(): void {
     this.dataService.changeReport(null);
@@ -34,18 +35,17 @@ export class SchoolTableComponent implements OnInit {
     this.dataTable.rows = this.rows;
     this.dataTable.titles = this.titles;
     this.dataTable = new DataTable();
-    // Get All Products
-    // let obsProducts = this.reportService.getAllReports();
-    // obsProducts.subscribe(data => {
-    //   this.reports = data;
-    //   this.dataTable = new DataTable();
-    //   this.dataTable.rows = this.rows;
-    //   this.dataTable.titles = this.titles;
-    //   // Add loading?
-    //   this.updateRows();
-    // }, error => {
+    let obsProducts = this.reportService.getAllreports();
+    obsProducts.subscribe(data => {
+      this.reports = data;
+      this.dataTable = new DataTable();
+      this.dataTable.rows = this.rows;
+      this.dataTable.titles = this.titles;
+      // Add loading?
+      this.updateRows();
+    }, error => {
 
-    // });
+    });
   }
   updateRows() {
 
